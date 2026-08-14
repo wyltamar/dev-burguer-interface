@@ -9,7 +9,7 @@ import GlobalStyles from './styles/globalStyles'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Login/>
     <GlobalStyles/>
+    <Login/>
   </StrictMode>,
 )
