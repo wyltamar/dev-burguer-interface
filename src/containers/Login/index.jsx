@@ -1,4 +1,4 @@
-import { Button, Container, Form, InputContainer, LeftContainer, Link, RightContainer, Title } from "./styles";
+import { Button, Container, Form, InputContainer, LeftContainer, RightContainer, Title } from "./styles";
 import Logo from "../../assets/logo.svg"
 
 
@@ -11,7 +11,8 @@ export function Login(){
             <RightContainer>
                 <Title>
                     Olá seja bem vindo ao <span>Dev Burguer!</span>
-                    Faça já seu <span>pedido.</span>
+                    <br/>
+                    Acesse com seu <span>Login e Senha.</span>
                 </Title>
                 <Form>
                     <InputContainer>
@@ -22,10 +23,9 @@ export function Login(){
                         <label>Senha</label>
                         <input type="password"/>
                     </InputContainer>
-                    <Link>Esqueci minha senha</Link>
                     <Button>Entrar</Button>
                 </Form>
-                <Link>Clique aqui se não possui conta</Link>
+                <p>Não possui conta? <a>Clique aqui.</a></p>
             </RightContainer>
         </Container>
     )
