@@ -10,10 +10,10 @@ const schema = yup
     .object({
         email: yup.string()
         .email('Digite um e-mail válido')
-        .required('O e-mail é obrigatório'),
+        .required('E-mail é obrigatório'),
         password: yup.string()
-        .min(6, 'Sua senha deve ter no mínimo 6 caracteres')
-        .required('Sua senha é um campo obrigatório'),
+        .min(6, 'A senha deve ter no mínimo 6 caracteres')
+        .required('O campo senha é obrigatório'),
     })
     .required()
 
