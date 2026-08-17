@@ -1,3 +1,4 @@
+import { api } from '../../services/api'
 import { Container, Form, InputContainer, LeftContainer, RightContainer, Title } from "./styles";
 import Logo from "../../assets/logo.svg"
 import { Button } from "../../components/Button";
@@ -5,6 +6,7 @@ import { Button } from "../../components/Button";
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
+
 
 const schema = yup
     .object({
@@ -27,7 +29,13 @@ export function Login() {
         resolver: yupResolver(schema),
     })
 
-    const onSubmit = (data) => console.log(data)
+    const onSubmit = async (data) => {
+        const response = await api.post('/sessions', {
+            email: data.email,
+            password: data.password,
+        })
+        console.log(response)
+    }
 
     return (
         <Container>
